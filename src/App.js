@@ -1,4 +1,5 @@
 import { useReducer } from "react";
+import Card from "./Components/Card";
 
 function App() {
   // logic
@@ -36,16 +37,50 @@ function App() {
     isLoggedIn: false,
   };
 
-  if (user2.id === "olivia" && user2.password === "password") {
-    // 1차 조건 판별
-    user2.isLoggedIn = ture;
-    if (userInput) {
-      //사용자 입력값이 있는 경우
-    }
-  }
+  // if (user2.id === "olivia" && user2.password === "password") {
+  //   // 1차 조건 판별
+  //   user2.isLoggedIn = ture;
+  //   if (userInput) {
+  //     //사용자 입력값이 있는 경우
+  //   }
+  // }
 
   // view
   return <div>hello world</div>;
+  <Card />;
 }
 
 export default App;
+
+/// 2024.9.9 코드
+
+const add = (a, b) => {
+  return a + b;
+};
+
+// 매개변수에 값을 주지 않은 경우
+console.log("add", add(1));
+
+// ####### 구조 분해 할당 ########
+// 배열
+const keys = ["name", "age"];
+const [key1, key2] = keys;
+console.log(key1, key2);
+
+// 객체
+const myuser = { name: "라해스", age: 2024 };
+const { name: userName, age: userAge } = myuser;
+
+console.log("userName", userName, "userAge", userAge);
+
+// ##### spread syntax #######
+// 배열에서
+const originalList = [1, 2, 3];
+const newList = [...originalList, 4, 5];
+newList.push(6);
+console.log(originalList, newList);
+
+// 객체에서
+const originalObj = { name: "라해스", age: 2024 };
+const newObj = { ...originalObj, age: 2025 };
+console.log(originalObj, newObj);
