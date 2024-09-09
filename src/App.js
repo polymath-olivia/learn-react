@@ -46,8 +46,13 @@ function App() {
   // }
 
   // view
-  return <div>hello world</div>;
-  <Card />;
+  return (
+    <div>
+      hello world
+      <Card />
+      <Card />
+    </div>
+  );
 }
 
 export default App;
