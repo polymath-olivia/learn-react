@@ -1,4 +1,7 @@
 import React from "react";
+import { RiPencilFill } from "react-icons/ri";
+// import { HiOutlinePencil } from "react-icons/hi";
+import { BiSolidTrashAlt } from "react-icons/bi";
 
 const FeedItem = () => {
   return (
@@ -15,11 +18,19 @@ const FeedItem = () => {
             <span className="font-bold">chutzrit</span>
             {/* START: 수정, 삭제 버튼 영역 */}
             <div className="ml-auto">
+              <img
+                src="/images/verified-icon.jpeg"
+                alt="Meta Verified Icon"
+                className="MetaVerifiedicon"
+              />
               <button type="button" className="max-w-6 p-1">
-                <img src="./images/icon-home.svg" alt="" />
+                <RiPencilFill />
+                {/* <HiOutlinePencil /> */}
+                {/* 연필 아이콘 */}
               </button>
               <button type="button" className="max-w-6 p-1">
-                <img src="./images/icon-home.svg" alt="" />
+                {/* <img src="./images/icon-home.svg" alt="" /> */}
+                <BiSolidTrashAlt />
               </button>
             </div>
             {/* END: 수정, 삭제 버튼 영역 */}
