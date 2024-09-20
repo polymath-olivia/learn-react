@@ -3,6 +3,22 @@ import { Link } from "react-router-dom";
 import PostInput from "../components/PostInput";
 
 const Post = () => {
+  //logic
+const handleChange = (value) => {
+  
+}
+
+const [churead, setChuread] = useState ('')
+const handleChange = {value} => {
+setChuread{value};
+};
+
+const handlePost = (event) => {
+  event.preventDefault();// 폼 제출 시 새로고침 방지 메소드
+onPost{churead}
+}
+
+  //view
   return (
     <div className="h-full">
       <header className="fixed max-w-[572px] mx-auto px-4 py-6 text-center top-0 left-0 right-0">
@@ -16,9 +32,9 @@ const Post = () => {
       </header>
       <main className="h-full pt-[72px] pb-[88px] overflow-hidden">
         <div className="h-full overflow-auto">
-          <form id="post">
+          <form id="post" onSubmit=>
             {/* START: 사용자 입력 영역 */}
-            <PostInput />
+            <PostInput onChange={handleChange} />
             {/* END: 사용자 입력 영역 */}
             {/* START: 게시 버튼 영역 */}
             <div className="w-full max-w-[572px] flex items-center fixed bottom-0 lef p-6">

@@ -11,7 +11,7 @@ const InputField = ({ type, field, onChange }) => {
    * 5. 부모에게 입력값 보내주기
    */
 
-  const [value, setValue] = useState("");
+  const [value, setValue] = useState('');
 
   const handleChange = (event) => {
     const { value } = event.target;

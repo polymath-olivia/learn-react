@@ -1,5 +1,12 @@
 import React from "react";
 
+const [value, setValue]
+
+const handleChange = (event) => {
+  const { value } = event.target;
+  setValue{value};
+}
+
 const PostInput = () => {
   return (
     <div className="px-6 border-t border-churead-gray-300 border-opacity-15 pt-3">
@@ -19,6 +26,7 @@ const PostInput = () => {
               rows={4}
               placeholder="문구를 작성하세요"
               className="w-full placeholder-churead-gray-300 placeholder-opacity-60 text-churead-gray-400 bg-transparent outline-none resize-none"
+              onChnage={handleChange}
             />
           </div>
         </div>
