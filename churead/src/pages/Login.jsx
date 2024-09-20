@@ -14,35 +14,37 @@ const Login = () => {
   // 자식으로부터 받은 inputValue의 값을 state에 저장
   /**
    * 1. handleInputChange함수에서 data라는 inputValue와 field라는 해당 input의 필드값을 받아온다.
-   * 2. 새로운 변수 선언하여 inputValue의 값을 넣어준다.(객체형태)
-   * 3. setFormData를 이용해서 새로운 변수의 값으로 변경한다.
+   * 2. 사용자가 email필드를 입력하면 email state에 inputValue의 값을 넣어준다.
+   * 3. 사용자가 password필드를 입력하면 password state에 inputValue의 값을 넣어준다.
+   * 4. form태그에서 onSubmit이라는 이벤트를 handleLogin이라는 함수에 연결한다
+   * 5. handleLogin에서 email, password 의 값을 확인한다.
    */
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const [formData, setFormData] = useState({
-    email: "",
-    password: "",
-  });
+  // const [formData, setFormData] = useState({
+  //   email: "",
+  //   password: "",
+  // });
 
   const handleInputChange = (inputValue, field) => {
     // field: 'email', 'password'
-    let newFormData = { ...formData, [field]: inputValue };
-    setFormData(newFormData);
+    // const newFormData = { ...formData, [field]: inputValue };
+    // setFormData(newFormData);
 
     if (field === "email") {
-      newFormData = { ...formData, email: inputValue };
+      setEmail(inputValue);
     } else {
-      newFormData = { ...formData, password: inputValue };
+      setPassword(inputValue);
     }
-    setFormData(newFormData);
-    console.log("🚀", field, inputValue);
   };
 
   const handleLogin = (event) => {
-    event.preventDefault();
-    console.log("🚀 FormData:", formData);
+    event.preventDefault(); // 폼 제출시 새로고침 방지 메소드
+    console.log("email", email);
+    console.log("password", password);
+    // TODO: 로그인 기능 구현
   };
 
   // view

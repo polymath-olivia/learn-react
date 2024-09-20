@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import SignIn from "./pages/SignIn";
 import Post from "./pages/Post";
+import Profile from "./pages/Profile";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/sign-in" element={<SignIn />} />
             <Route path="/post" element={<Post />} />
+            <Route path="/profile" element={<Profile />} />
           </Routes>
         </BrowserRouter>
       </div>

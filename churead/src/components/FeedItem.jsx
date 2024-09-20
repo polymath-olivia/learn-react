@@ -1,7 +1,6 @@
 import React from "react";
-import { RiPencilFill } from "react-icons/ri";
-// import { HiOutlinePencil } from "react-icons/hi";
-import { BiSolidTrashAlt } from "react-icons/bi";
+import { RiHeartLine, RiPencilFill } from "react-icons/ri";
+import { FaTrash } from "react-icons/fa6";
 
 const FeedItem = () => {
   return (
@@ -17,20 +16,12 @@ const FeedItem = () => {
           <div className="flex items-center">
             <span className="font-bold">chutzrit</span>
             {/* START: 수정, 삭제 버튼 영역 */}
-            <div className="ml-auto">
-              <img
-                src="/images/verified-icon.jpeg"
-                alt="Meta Verified Icon"
-                className="MetaVerifiedicon"
-              />
+            <div className="ml-auto flex gap-1">
               <button type="button" className="max-w-6 p-1">
-                <RiPencilFill />
-                {/* <HiOutlinePencil /> */}
-                {/* 연필 아이콘 */}
+                <RiPencilFill size={"18px"} />
               </button>
               <button type="button" className="max-w-6 p-1">
-                {/* <img src="./images/icon-home.svg" alt="" /> */}
-                <BiSolidTrashAlt />
+                <FaTrash size={"14px"} />
               </button>
             </div>
             {/* END: 수정, 삭제 버튼 영역 */}
@@ -41,10 +32,12 @@ const FeedItem = () => {
             effective for getting around the city, especially during NYFW.
           </p>
           {/* START: 좋아요 영역 */}
-          <div className="flex items-center">
+          <div className="flex items-center gap-1">
             <button type="button" className="text-churead-gray-400">
-              좋아요 아이콘 <span>5</span>
+              <RiHeartLine />
+              {/* <RiHeartFill color="red" /> */}
             </button>
+            <span>5</span>
           </div>
           {/* END: 좋아요 영역 */}
         </div>
